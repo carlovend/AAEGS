@@ -44,6 +44,23 @@ git clone https://gitlab.com/exploit-database/exploitdb.git
 
 ---
 
+### 3. Configurare il file `.env`
+
+Crea un file `.env` nella directory principale del progetto con il seguente contenuto:
+
+```env
+NVD_API_KEY="YOUR_NVD_API_KEY"
+NVD_CVE_SEARCH="https://services.nvd.nist.gov/rest/json/cves/2.0"
+NVD_CPE_SEARCH="https://services.nvd.nist.gov/rest/json/cpes/2.0"
+POC_IN_GITHUB="/percorso/assoluto/PoC-in-GitHub"
+REPO="/percorso/assoluto/cartella-del-progetto"
+```
+
+> 🔐 **Nota:** sostituisci `YOUR_NVD_API_KEY` con la tua chiave personale ottenuta dal [sito NVD](https://nvd.nist.gov/developers/request-an-api-key).  
+> 🗂️ I percorsi locali devono essere assoluti e riferiti al tuo sistema.
+
+---
+
 ## 🚀 Esecuzione
 
 1. **Avvia il servizio Ollama**
@@ -82,4 +99,3 @@ python main.py
 - Alcune vulnerabilità potrebbero non avviarsi correttamente o essere incompatibili con la generazione attuale della PoC.
 
 ---
-
